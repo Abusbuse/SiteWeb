@@ -1,0 +1,92 @@
+:root {
+    --footColor:rgba(75, 75, 76, 0.53);
+}
+
+footer .left{
+    margin: auto;
+    display: flex;
+}
+
+footer nav {
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+footer .center{
+    margin: auto;
+    font-size: min(15px);
+    color: rgb(255, 191, 0);
+}
+
+.ligne {
+    border: solid 1px black;
+    margin: 15px;
+}
+
+footer .right{
+    margin: auto;
+    float: right;
+}
+
+footer .right h2{
+    margin: auto;
+    font-size: min(15px);
+    color: rgb(255, 191, 0);
+}
+
+#media{
+    margin-top: 10px;
+    margin-left: 0;
+    text-align: center;
+}
+
+.footerArrow .roundBtn{
+    margin: auto;
+    margin-left: 20px;
+    text-align: center;
+    width: 30px;
+    padding: 3px;
+    display: inline-block;
+    line-height: 20px;
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(255, 191, 0);
+    border: 2px 
+    solid rgb(255, 191, 0);
+    background-color: var(--footColor);
+    border-radius: 50px;
+}
+
+.footerArrow{
+    position: fixed;
+    bottom: 1%;
+    right: 2%;
+}
+
+footer{
+    display: flex;
+    margin:0;
+    background-color: var(--footColor);
+    border-color: rgb(255, 191, 0);
+    border-width: 1px;
+    border-style: solid;
+    display: flex;
+}
+
+.buttons {
+    margin-right: 10px;
+    color: white;
+}
+
+.buttons:hover {
+    color: white;
+}
+
+@media screen AND (max-width: 950px) {
+    footer p, footer a, footer h2 {
+        font-size: 10px;
+    }
+}

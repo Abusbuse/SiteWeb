@@ -1,0 +1,151 @@
+:root {
+    --backColor:rgba(22, 22, 22, 0.773);
+    --footColor:rgba(75, 75, 76, 0.53);
+    --yellowColor:rgb(255, 191, 0);
+}   
+
+header nav{
+    width: 100%;
+    display: flex;
+    margin: 0;
+    position: fixed;
+    top: 90px;
+    left: 0;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+
+    transition: .2s ease;
+    transform: scaleX(0);
+    transform-origin: right;
+    border-width: 1px;
+    border-style: solid;
+    background-color: rgb(0, 0, 0);
+    border-color: var(--yellowColor);
+    z-index: 1000;
+}
+
+body.menu-open nav div ul li a {
+    color: rgb(255, 255, 255);
+}
+
+/*Empecher le scroll*/
+body.menu-open {
+    overflow: hidden;
+}
+
+body.menu-open header nav {
+    transform: scaleX(1);
+
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    margin: auto;
+    margin-left: 10px;
+    font-size: min(20px);
+    color: rgb(255, 255, 255);
+}
+
+header{
+    align-items: center;
+    display: flex;
+    height: 90px;
+    margin: 0;
+    background-color: var(--footColor);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--yellowColor);
+}
+
+.button {
+    margin-right: 10px;
+    
+    color: rgb(255, 255, 255);
+}
+
+.button:hover{
+    color: rgb(0, 0, 0);
+}
+
+.button:hover:after{
+    width: 100%;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: auto;
+}
+
+.header p{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.logo {
+    margin-left: 10px;
+    height: 75px; 
+    width: auto;
+    max-width: 90%;
+}
+
+#burger {
+    margin-right: 10px;
+    width:30px;
+    height:3px;
+    display:inline-block;
+    position:relative;
+    background:var(--yellowColor);
+}
+
+#burger::before,
+#burger::after {
+    content:'';
+    width:30px;
+    height:3px;
+    display:inline-block;
+    position:absolute;
+    transform-origin: center;
+    transition: all 0.3s ease;
+    background:var(--yellowColor);
+}
+
+#burger::before {
+    top:-7px;
+}
+
+#burger::after {
+    top:7px;
+}
+
+body.menu-open #burger {
+    background:transparent;
+}
+
+body.menu-open #burger::before {
+    transform: rotate(45deg);
+    top:0;
+}
+
+body.menu-open #burger::after {
+    transform: rotate(-45deg);
+    top:0;
+}
+
+
+header ul li {
+    padding:10px 0;
+    text-align:center;
+}
